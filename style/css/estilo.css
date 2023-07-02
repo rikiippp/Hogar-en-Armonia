@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #285C54;
+    box-shadow: 3px 3px 3px #9fa6b2;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid #398378;
+    background: #398378;
+    background: linear-gradient(to top, #398378, #42968A);
+}
+.button:hover {
+    color: #FFFFFF !important;
+    background: #398378;
+    background: linear-gradient(to top, #398378, #7FEB73);
+}
+
+.navbar-nav {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #398378;
+}
+
+.nav-item a:hover {
+    color: rgb(138 190 83);
+}
+
+.form-control {
+    border: 1px solid grey;
+}
+
+.presentacion {
+    height: 60px;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 6px;
+    color: #398378;
+    font-size: 28px;
+    font-weight: 500;
+    border-top: 2px solid #398378;
+    border-bottom: 2px solid #398378;
+}
+
+.ambientes {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.primer_ambiente {
+    width: 400px;
+    height: 750px;
+    margin: 0 30px;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.primer_ambiente img {
+    width: 100%;
+    transition: 0.5s;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.primer_ambiente img:hover {
+    transform: scale(1.2);
+}
+.card_ambiente {
+    text-align: center;
+}
+.card_ambiente p{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    padding: 10px;
+}
+
+.segundo_ambiente {
+    width: 60%;
+    height: 750px;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.segundo_ambiente img {
+    width: 100%;
+    transition: 0.5s;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.segundo_ambiente img:hover {
+    transform: scale(1.2);
+}
+
+
+
+.contenedor-semana {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card-semana {
+    width: 18rem;
+    margin: 30px;
+    border: 1px solid #9fa6b2;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #9fa6b2;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.card-semana:hover {
+    transform: scale(1.1);
+}
+
+.card-semana img {
+    width: 100%;
+}
+
+.card-body-semana {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-body-semana h5 {
+    text-align: left;
+    font-weight: 700;
+}
+
+.card-body-semana p {
+    text-align: left;
+}
+
+
+
+.contenedor-mueble-destacado {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;   
+}
+.card {
+    box-shadow: 3px 3px 3px #9fa6b2;
+
+}
+.card-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 992px) {
+
+    .ambientes {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .primer_ambiente {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .card_ambiente p {
+        text-align: center;
+    }
+    .primer_ambiente img {
+        width: 50%;
+    }
+    .segundo_ambiente {
+        margin: 20px 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .segundo_ambiente img {
+        width: 80%;
+    }
+    .contenedor-semana {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .presentacion p {
+        font-size: 20px;
+        padding: 5px 0;
+    }
+    .card_ambiente p {
+        font-size: 16px;
+    }
+
+}
+
+
+

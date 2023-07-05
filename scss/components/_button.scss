@@ -1,0 +1,22 @@
+.button {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #FFFFFF !important;
+    font-size: 14px;
+    text-shadow: 1px 1px 0px #285C54;
+    box-shadow: 3px 3px 3px #9fa6b2;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px solid #398378;
+    background: #398378;
+    background: linear-gradient(to top, #398378, #42968A);
+    transition: all 0.5s;
+
+    &:hover {
+        color: #FFFFFF !important;
+        background: #398378;
+        background: linear-gradient(to top, #265C4B, #589A8D);
+        transform: scale(1.02);
+    }
+}

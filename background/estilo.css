@@ -2,10 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
+    scroll-behavior: smooth;
     height: 100vh;
     background-color: white;
     font-family: 'Roboto', sans-serif;
@@ -706,9 +706,9 @@ footer {
     }
 }
 
-@media (max-width: 330px) {
+@media (max-width: 380px) {
     .presentacion p {
-        font-size: 20px;
+        font-size: 22px;
         padding: 5px 0;
     }
 

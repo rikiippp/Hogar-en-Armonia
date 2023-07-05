@@ -1,0 +1,13 @@
+@import '../components/variables';
+
+.presentacion {
+    height: 60px;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 6px;
+    color: $primary;
+    font-size: 28px;
+    font-weight: bold;
+    border-top: 2px solid $primary;
+    border-bottom: 2px solid $primary;
+}

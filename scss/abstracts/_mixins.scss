@@ -1,14 +1,35 @@
-@mixin flex($direction, $wrap, $justify, $align){
-    display: flex;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
-    justify-content: $justify;
-    align-items: $align;
 
-}
+@mixin card($width, $height, $img) {
+    width: $width;
+    height: $height;
+    margin: 15px;
+    border: 1px solid #9fa6b2;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #9fa6b2;
+    overflow: hidden;
+    transition: all 0.5s;
 
-@mixin mobile {
-    @media (max-width: 380px) {
-        @content
+    &:hover {
+        transform: scale(1.05);
     }
+
+    img {
+        width: 100%;
+        height: $img;
+        object-fit: cover;
+    }
+    .card-body-productos {
+        padding: 20px;
+        text-align: center;
+
+        h5 {
+            text-align: left;
+            font-weight: 700;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
+
 }

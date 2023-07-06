@@ -1,9 +1,11 @@
+// MEDIA QUERIY 
+@import './abstracts/media-query';
 // ESTILOS GENERALES
 @import './base/reset';
-// VARIABLES 
-@import './components/variables';
 // MiXINS 
 @import './abstracts/mixins';
+// VARIABLES 
+@import './components/variables';
 // BARRA DE NAVEGACIÓN
 @import './layout/navbar';
 // CUADRO DE PRESENTACIÓN
@@ -21,16 +23,38 @@
     display: flex;
     justify-content: center;
 
+    @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+
     .primer_ambiente {
         width: 400px;
         height: 80vh;
-        margin: 0 30px;
+        margin: 0 10px;
         overflow: hidden;
         border-radius: 10px;
 
+        @include tablet {
+            width: 60%;
+            height: 60vh;
+            text-align: center;
+        }
+
+        @include mobile {
+            width: 80%;
+        }
+
         img {
             width: 100%;
+            height: 70%;
+            object-fit: cover;
             border-radius: 10px;
+
+            @include mobile {
+                width: 80%;
+            }
         }
 
         .card_ambiente {
@@ -40,8 +64,15 @@
                 text-align: left;
                 font-size: 18px;
                 font-weight: 500;
-                color: $negro;
+                color: $color-letra;
                 padding: 10px;
+
+                @include mobile {
+                    font-size: 16px;
+                    text-align: center;
+                    width: 90%;
+                    margin: auto;
+                }
             }
         }
     }
@@ -49,15 +80,39 @@
     .segundo_ambiente {
         width: 60%;
         height: 80vh;
+        margin: 0 10px;
         overflow: hidden;
         border-radius: 10px;
 
+        @include tablet {
+            margin: 20px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        @include mobile {
+            width: 90%;
+            height: 400px;
+            background-color: aqua;
+        }
+
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
+
+            @include tablet {
+                width: 80%;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
         }
     }
 }
+
 
 // Productos Destacados de la Semana
 .contenedor-semana {
@@ -67,37 +122,21 @@
     flex-direction: row;
     justify-content: center;
 
-    .card-semana {
-        width: 18rem;
-        margin: 30px;
-        border: 1px solid #9fa6b2;
-        border-radius: 10px;
-        box-shadow: 3px 3px 3px #9fa6b2;
-        overflow: hidden;
-        transition: all 0.5s;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center
+    }
 
-        &:hover {
-            transform: scale(1.1);
+    .card-productos {
+        @include card (17rem, 50vh, 60%);
+
+        @include mobile {
+            width: 15rem;
+            height: 45vh;
         }
 
-        img {
-            width: 100%;
-            height: 40vh;
-        }
-
-        .card-body-semana {
-            padding: 20px;
-            text-align: center;
-
-            h5 {
-                text-align: left;
-                font-weight: 700;
-            }
-
-            p {
-                text-align: left;
-            }
-        }
     }
 }
 
@@ -112,13 +151,18 @@
         box-shadow: 3px 3px 3px #9fa6b2;
 
         .card-title {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
         }
 
         .card-text {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: bold;
+
+            .rebaja {
+                margin: 0 20px;
+                color: #c23535b4;
+            }
         }
     }
 
@@ -127,7 +171,7 @@
 
 // Footer 
 .footer {
-    background-color: $primary;
+    background-color: $color-primary;
 
     .contenedor-footer {
         width: 100%;
@@ -136,28 +180,61 @@
         justify-content: space-evenly;
         padding: 30px 0;
 
+        @include intermedio {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            align-items: center;
+        }
+
         .columna-contacto {
             h4 {
-                color: $negro;
+                color: $color-letra;
                 text-align: left;
                 font-size: 24px;
                 font-weight: bolder;
                 margin-bottom: 20px;
+
+                @include intermedio {
+                    font-size: 22px;
+                    text-align: center;
+                }
+
+                @include mobile {
+                    font-size: 20px;
+                }
             }
 
             p {
-                color: $negro;
+                color: $color-letra;
                 text-align: left;
-                font-size: 16px;
+                font-size: 18px;
                 font-weight: 300;
+
+                @include intermedio {
+                    font-size: 16px;
+                }
+
+                @include mobile {
+                    font-size: 16px;
+                }
             }
         }
 
         .columna-redes {
             h4 {
-                color: $negro;
+                color: $color-letra;
                 font-size: 24px;
                 font-weight: bolder;
+
+                @include intermedio {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                @include mobile {
+                    font-size: 20px;
+                }
             }
 
             a {
@@ -167,12 +244,26 @@
 
             img {
                 width: 40px;
+
+                @include mobile {
+                    width: 30px;
+                    margin: 20px 10px;
+                }
             }
         }
 
         .logo-footer {
+
+            @include intermedio {
+                order: -1;
+                text-align: center;
+            }
             img {
                 width: 300px;
+
+                @include mobile {
+                    width: 250px;
+                }
             }
         }
     }
@@ -184,7 +275,7 @@
     .copyright {
         text-align: center;
         margin: 20px 0;
-        color: $negro;
+        color: $color-letra;
         font-size: 14px;
     }
 }
@@ -209,10 +300,14 @@
         margin: 30px 0;
 
         p {
-            color: black;
+            color: $color-letra;
             font-size: 18px;
             text-align: left;
             margin: 20px;
+
+            @include mobile {
+                width: 90%;
+            }
         }
     }
 }
@@ -223,15 +318,22 @@
     width: 80%;
     height: 80px;
     margin: 30px auto;
-    background-color: #8ABE53;
+    background-color: $verde-claro;
     border-radius: 10px;
 
     h1 {
-        color: black;
+        color: $color-letra;
         font-size: 28px;
         font-weight: bold;
         padding-top: 25px;
         padding-left: 30px;
+
+        @include intermedio {
+            font-size: 26px;
+        }
+        @include mobile {
+            font-size: 22px;
+        }
     }
 }
 
@@ -241,6 +343,12 @@
     height: 80vh;
 
     .form-contacto {
+        @include tablet {
+            width: 100%;
+        }
+        @include intermedio {
+            width: 100%;
+        }
         form {
             margin: auto;
             width: 50%;
@@ -250,29 +358,45 @@
             border-radius: 10px;
             box-shadow: 3px 3px 2px 0px rgba(159, 166, 178, 1);
 
+            @include tablet {
+                width: 100%;
+            }
+            @include intermedio {
+                width: 100%;
+            }
+
             button {
                 margin: 30px auto;
                 width: 200px;
                 font-size: 18px;
+
+                @include intermedio {
+                    width: 100px;
+                }
             }
 
             label {
-                color: black;
+                color: $color-letra;
                 align-items: left;
                 font-size: 18px;
                 margin: 10px 0 0 40px;
                 padding-bottom: 10px;
+
+                @include intermedio {
+                    margin: 10px 0 0 20px;
+                    font-size: 16px;
+                }
             }
 
             .input-form {
                 width: 90%;
                 height: 40px;
-                padding: 0 0 0 20px;
+                padding: 0 0;
                 margin: auto;
-                color: black;
+                color: $color-letra;
                 font-size: 16px;
-                background-color: #8ABE53;
-                border: 1px solid #8ABE53;
+                background-color: $verde-claro;
+                border: 1px solid $verde-claro;
                 border-radius: 10px;
             }
 
@@ -281,10 +405,10 @@
                 height: 100px;
                 padding: 10px 0 0 20px;
                 margin: auto;
-                color: black;
+                color: $color-letra;
                 font-size: 16px;
-                background-color: #8ABE53;
-                border: 1px solid #8ABE53;
+                background-color: $verde-claro;
+                border: 1px solid $verde-claro;
                 border-radius: 10px;
             }
         }
@@ -302,38 +426,11 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    .card-muebles {
-        width: 18rem;
-        height: 45vh;
-        margin: 15px;
-        border: 1px solid #9fa6b2;
-        border-radius: 10px;
-        box-shadow: 3px 3px 3px #9fa6b2;
-        overflow: hidden;
-        transition: all 0.5s;
+    .card-productos {
+        @include card (18rem, 50vh, 60%);
 
-        &:hover {
-            transform: scale(1.05);
-        }
-
-        img {
-            width: 100%;
-            height: 60%;
-            object-fit: cover;
-        }
-
-        .card-body-muebles {
-            padding: 20px;
-            text-align: center;
-
-            h5 {
-                text-align: left;
-                font-size: 18px;
-                font-weight: bold;
-            }
-            p {
-                text-align: left;
-            }
+        @include mobile {
+            width: 15rem;
         }
     }
 }
@@ -348,25 +445,14 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    .card-sillones {
-        width: 18rem;
-        height: 45vh;
-        margin: 15px;
-        border: 1px solid #9fa6b2;
-        border-radius: 10px;
-        box-shadow: 3px 3px 3px #9fa6b2;
-        overflow: hidden;
-        transition: all 0.5s;
+    .card-productos {
+        @include card (18rem, 45vh, 60%);
 
-        &:hover {
-            transform: scale(1.05);
+        @include mobile {
+            width: 15rem;
+            height: 50vh;
         }
 
-        img {
-            width: 100%;
-            height: 60%;
-            object-fit: cover;
-        }
     }
 }
 
@@ -380,24 +466,12 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 
-    .card-sillas {
-        width: 18rem;
-        height: 45vh;
-        margin: 15px;
-        border: 1px solid #9fa6b2;
-        border-radius: 10px;
-        box-shadow: 3px 3px 3px #9fa6b2;
-        overflow: hidden;
-        transition: all 0.5s;
+    .card-productos {
+        @include card(18rem, 45vh, 60%);
 
-        &:hover {
-            transform: scale(1.05);
-        }
-
-        img {
-            width: 100%;
-            height: 60%;
-            object-fit: cover;
+        @include mobile {
+            width: 15rem;
+            height: 50vh;
         }
     }
 }
@@ -411,38 +485,14 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    .card-lamparas {
-        width: 17rem;
-        height: 55vh;
-        margin: 20px;
-        overflow: hidden;
-        border: 1px solid #9fa6b2;
-        border-radius: 10px;
-        box-shadow: 3px 3px 3px #9fa6b2;
-        transition: all 0.5s;
+    .card-productos {
+        @include card (18rem, 55vh, 65%);
 
-        &:hover {
-            transform: scale(1.05);
-        }
-
-        img {
-            width: 100%;
-            height: 70%;
-        }
-
-        .card-body-interiores {
-            text-align: center;
-
-            h5 {
-                padding: 10px 0 0 20px;
-                text-align: left;
-                font-size: 18px;
-                font-weight: bold;
-            }
-
-            p {
-                text-align: left;
-                padding-left: 20px;
+        @include mobile {
+            width: 15rem;
+            height: 50vh;
+            img {
+                height: 60%;
             }
         }
     }
@@ -457,305 +507,14 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    .card-plantas {
-        width: 17rem;
-        height: 55vh;
-        margin: 20px;
-        overflow: hidden;
-        border: 1px solid #9fa6b2;
-        border-radius: 10px;
-        box-shadow: 3px 3px 3px #9fa6b2;
-        transition: all 0.5s;
+    .card-productos {
 
-        &:hover {
-            transform: scale(1.05);
-        }
+        @include card (17rem, 55vh, 65%);
 
-        img {
-            width: 100%;
-            height: 70%;
+        @include mobile {
+            width: 15.5rem;
+            height: 57vh;
         }
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 992px) {
-
-    .ambientes {
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .primer_ambiente {
-            width: 100%;
-            height: auto;
-            text-align: center;
-
-            img {
-                width: 50%;
-            }
-
-            .card_ambiente {
-                p {
-                    text-align: center;
-                }
-            }
-        }
-
-        .segundo_ambiente {
-            margin: 20px 0;
-            width: 100%;
-            height: auto;
-            text-align: center;
-
-            img {
-                width: 80%;
-            }
-        }
-    }
-
-    .contenedor-semana {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .contenedor-footer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .logo-footer {
-            margin: 30px;
-            order: 3;
-        }
-    }
-
-
-    .contenedor-nosotros {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .info-nosotros {
-            width: 90%;
-
-            img {
-                width: 100%;
-            }
-
-            p {
-                font-size: 16px;
-            }
-        }
-
-        .mapa {
-            width: 100%;
-            text-align: center;
-
-            iframe {
-                width: 80%;
-            }
-        }
-    }
-
-    .contenedor-contacto {
-        width: 100%;
-
-        .form-contacto {
-            form {
-                width: 80%;
-
-                label {
-                    margin: 10px 0 0 40px;
-                }
-            }
-
-        }
-    }
-}
-
-@media (max-width: 695px) {
-
-    .presentacion {
-        p {
-            font-size: 24px;
-        }
-    }
-
-    .footer {
-
-        .contenedor-footer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .columna-contacto {
-                h4 {
-                    font-size: 20px;
-                    text-align: center;
-                }
-
-                p {
-                    font-size: 18px;
-                }
-            }
-
-            .columna-redes {
-                h4 {
-                    font-size: 20px;
-                    text-align: center;
-                }
-
-                img {
-                    width: 40px;
-                }
-            }
-
-            .logo-footer {
-                order: -1;
-                text-align: center;
-
-                img {
-                    width: 70%;
-                }
-            }
-
-        }
-    }
-
-
-
-    .form-contacto {
-        width: 100%;
-
-        form {
-            width: 90%;
-
-            label {
-                margin: 10px 0 0 20px;
-                font-size: 16px;
-            }
-
-            button {
-                width: 100px;
-            }
-        }
-    }
-}
-
-@media (max-width: 380px) {
-    .nav-logo {
-        margin: auto;
-    }
-
-    .presentacion {
-        p {
-            font-size: 22px;
-            padding: 5px 0;
-        }
-    }
-
-    .card_ambiente {
-        p {
-            font-size: 16px;
-        }
-    }
-
-    .contenedor-semana {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-
-        .card-semana {
-            img {
-                height: 40vh;
-            }
-        }
-    }
-
-    .footer {
-        .contenedor-footer {
-            flex-wrap: nowrap;
-
-            .columna-contacto {
-                h4 {
-                    text-align: center;
-                }
-
-                p {
-                    font-size: 14px;
-                }
-            }
-
-            .logo-footer {
-                order: -1;
-
-                img {
-                    width: 90%;
-                }
-            }
-
-            .columna-redes {
-                h4 {
-                    font-size: 18px;
-                }
-
-                img {
-                    width: 30px;
-                }
-            }
-        }
-    }
-
-    .info-nosotros {
-        p {
-            width: 90%;
-        }
-    }
-
-    .card-muebles {
-        width: 14rem;
-        height: 35vh;
-        margin: 15px;
-
-        .card-body-muebles {
-            padding: 20px;
-            text-align: center;
-
-            h5 {
-                text-align: left;
-                font-size: 18px;
-                font-weight: bold;
-            }
-
-            p {
-                text-align: left;
-            }
-        }
-    }
+    
 }

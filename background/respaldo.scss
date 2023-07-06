@@ -1,0 +1,761 @@
+// ESTILOS GENERALES
+@import './base/reset';
+// VARIABLES 
+@import './components/variables';
+// MiXINS 
+@import './abstracts/mixins';
+// BARRA DE NAVEGACIÓN
+@import './layout/navbar';
+// CUADRO DE PRESENTACIÓN
+@import './layout/presentacion';
+// BOTÓN 
+@import './components/button';
+// BOTÓN FOOTER 
+@import './components/button-footer';
+
+
+// Ambientes Inicio 
+.ambientes {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+
+    .primer_ambiente {
+        width: 400px;
+        height: 80vh;
+        margin: 0 30px;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card_ambiente {
+            text-align: center;
+
+            p {
+                text-align: left;
+                font-size: 18px;
+                font-weight: 500;
+                color: $negro;
+                padding: 10px;
+            }
+        }
+    }
+
+    .segundo_ambiente {
+        width: 60%;
+        height: 80vh;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+// Productos Destacados de la Semana
+.contenedor-semana {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .card-semana {
+        width: 18rem;
+        margin: 30px;
+        border: 1px solid #9fa6b2;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #9fa6b2;
+        overflow: hidden;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 100%;
+            height: 40vh;
+        }
+
+        .card-body-semana {
+            padding: 20px;
+            text-align: center;
+
+            h5 {
+                text-align: left;
+                font-weight: 700;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// Mueble Destacado 
+.contenedor-mueble-destacado {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+
+    .card {
+        box-shadow: 3px 3px 3px #9fa6b2;
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+
+}
+
+
+// Footer 
+.footer {
+    background-color: $primary;
+
+    .contenedor-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 30px 0;
+
+        .columna-contacto {
+            h4 {
+                color: $negro;
+                text-align: left;
+                font-size: 24px;
+                font-weight: bolder;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: $negro;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+
+        .columna-redes {
+            h4 {
+                color: $negro;
+                font-size: 24px;
+                font-weight: bolder;
+            }
+
+            a {
+                margin: 20px;
+                text-decoration: none;
+            }
+
+            img {
+                width: 40px;
+            }
+        }
+
+        .logo-footer {
+            img {
+                width: 300px;
+            }
+        }
+    }
+
+    .button-up {
+        text-align: center;
+    }
+
+    .copyright {
+        text-align: center;
+        margin: 20px 0;
+        color: $negro;
+        font-size: 14px;
+    }
+}
+
+// Pagina Nosotros 
+.contenedor-nosotros {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+
+    div {
+        margin: 20px 0;
+    }
+
+    .info-nosotros {
+        width: 50%;
+        text-align: center;
+        margin: 30px 0;
+
+        p {
+            color: black;
+            font-size: 18px;
+            text-align: left;
+            margin: 20px;
+        }
+    }
+}
+
+
+// Pagina Contacto
+.head-contacto {
+    width: 80%;
+    height: 80px;
+    margin: 30px auto;
+    background-color: #8ABE53;
+    border-radius: 10px;
+
+    h1 {
+        color: black;
+        font-size: 28px;
+        font-weight: bold;
+        padding-top: 25px;
+        padding-left: 30px;
+    }
+}
+
+.contenedor-contacto {
+    margin: auto;
+    width: 80%;
+    height: 80vh;
+
+    .form-contacto {
+        form {
+            margin: auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #9fa6b2;
+            border-radius: 10px;
+            box-shadow: 3px 3px 2px 0px rgba(159, 166, 178, 1);
+
+            button {
+                margin: 30px auto;
+                width: 200px;
+                font-size: 18px;
+            }
+
+            label {
+                color: black;
+                align-items: left;
+                font-size: 18px;
+                margin: 10px 0 0 40px;
+                padding-bottom: 10px;
+            }
+
+            .input-form {
+                width: 90%;
+                height: 40px;
+                padding: 0 0 0 20px;
+                margin: auto;
+                color: black;
+                font-size: 16px;
+                background-color: #8ABE53;
+                border: 1px solid #8ABE53;
+                border-radius: 10px;
+            }
+
+            #mensaje {
+                width: 90%;
+                height: 100px;
+                padding: 10px 0 0 20px;
+                margin: auto;
+                color: black;
+                font-size: 16px;
+                background-color: #8ABE53;
+                border: 1px solid #8ABE53;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+
+// Pagina Muebles 
+
+.contenedor-muebles {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .card-muebles {
+        width: 18rem;
+        height: 45vh;
+        margin: 15px;
+        border: 1px solid #9fa6b2;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #9fa6b2;
+        overflow: hidden;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .card-body-muebles {
+            padding: 20px;
+            text-align: center;
+
+            h5 {
+                text-align: left;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            p {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// Sector Sillones
+
+.contenedor-sillones {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .card-sillones {
+        width: 18rem;
+        height: 45vh;
+        margin: 15px;
+        border: 1px solid #9fa6b2;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #9fa6b2;
+        overflow: hidden;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+    }
+}
+
+// Sector Sillas 
+
+.contenedor-sillas {
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .card-sillas {
+        width: 18rem;
+        height: 45vh;
+        margin: 15px;
+        border: 1px solid #9fa6b2;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #9fa6b2;
+        overflow: hidden;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+        }
+    }
+}
+
+// Pagina Interiores 
+
+.contenedor-lamparas {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card-lamparas {
+        width: 17rem;
+        height: 55vh;
+        margin: 20px;
+        overflow: hidden;
+        border: 1px solid #9fa6b2;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #9fa6b2;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 70%;
+        }
+
+        .card-body-interiores {
+            text-align: center;
+
+            h5 {
+                padding: 10px 0 0 20px;
+                text-align: left;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            p {
+                text-align: left;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+// Sector Plantas 
+
+.contenedor-plantas {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card-plantas {
+        width: 17rem;
+        height: 55vh;
+        margin: 20px;
+        overflow: hidden;
+        border: 1px solid #9fa6b2;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px #9fa6b2;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 70%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+
+    .ambientes {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .primer_ambiente {
+            width: 100%;
+            height: auto;
+            text-align: center;
+
+            img {
+                width: 50%;
+            }
+
+            .card_ambiente {
+                p {
+                    text-align: center;
+                }
+            }
+        }
+
+        .segundo_ambiente {
+            margin: 20px 0;
+            width: 100%;
+            height: auto;
+            text-align: center;
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+
+    .contenedor-semana {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .contenedor-footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .logo-footer {
+            margin: 30px;
+            order: 3;
+        }
+    }
+
+
+    .contenedor-nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .info-nosotros {
+            width: 90%;
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .mapa {
+            width: 100%;
+            text-align: center;
+
+            iframe {
+                width: 80%;
+            }
+        }
+    }
+
+    .contenedor-contacto {
+        width: 100%;
+
+        .form-contacto {
+            form {
+                width: 80%;
+
+                label {
+                    margin: 10px 0 0 40px;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 695px) {
+
+    .presentacion {
+        p {
+            font-size: 24px;
+        }
+    }
+
+    .footer {
+
+        .contenedor-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .columna-contacto {
+                h4 {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            .columna-redes {
+                h4 {
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                img {
+                    width: 40px;
+                }
+            }
+
+            .logo-footer {
+                order: -1;
+                text-align: center;
+
+                img {
+                    width: 70%;
+                }
+            }
+
+        }
+    }
+
+
+
+    .form-contacto {
+        width: 100%;
+
+        form {
+            width: 90%;
+
+            label {
+                margin: 10px 0 0 20px;
+                font-size: 16px;
+            }
+
+            button {
+                width: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .nav-logo {
+        margin: auto;
+    }
+
+    .presentacion {
+        p {
+            font-size: 22px;
+            padding: 5px 0;
+        }
+    }
+
+    .card_ambiente {
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .contenedor-semana {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        .card-semana {
+            img {
+                height: 40vh;
+            }
+        }
+    }
+
+    .footer {
+        .contenedor-footer {
+            flex-wrap: nowrap;
+
+            .columna-contacto {
+                h4 {
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .logo-footer {
+                order: -1;
+
+                img {
+                    width: 90%;
+                }
+            }
+
+            .columna-redes {
+                h4 {
+                    font-size: 18px;
+                }
+
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .info-nosotros {
+        p {
+            width: 90%;
+        }
+    }
+
+    .card-muebles {
+        width: 14rem;
+        height: 35vh;
+        margin: 15px;
+
+        .card-body-muebles {
+            padding: 20px;
+            text-align: center;
+
+            h5 {
+                text-align: left;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+    }
+}

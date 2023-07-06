@@ -489,7 +489,7 @@ footer {
 .card-lamparas {
     width: 17rem;
     height: 55vh;
-    margin: 20px;
+    margin: 15px;
     overflow: hidden;
     border: 1px solid #9fa6b2;
     border-radius: 10px;
@@ -535,7 +535,7 @@ footer {
 .card-plantas {
     width: 17rem;
     height: 55vh;
-    margin: 20px;
+    margin: 15px;
     overflow: hidden;
     border: 1px solid #9fa6b2;
     border-radius: 10px;

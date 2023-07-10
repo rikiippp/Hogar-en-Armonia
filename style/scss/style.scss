@@ -42,6 +42,10 @@
             text-align: center;
         }
 
+        @include intermedio {
+            height: 70vh;
+        }
+
         @include mobile {
             width: 80%;
         }
@@ -120,10 +124,18 @@
     margin: auto;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
 
+    @include tablet {
+        flex-wrap: wrap;
+    }
+
+    @include intermedio {
+        flex-direction: column;
+    }
+
     @include mobile {
-        display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center
@@ -132,6 +144,7 @@
     .card-productos {
         @include card (17rem, 50vh, 60%);
 
+    
         @include mobile {
             width: 15rem;
             height: 45vh;

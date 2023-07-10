@@ -3,10 +3,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  scroll-behavior: smooth;
   height: 100vh;
   background-color: white;
   font-family: "Roboto", sans-serif;
@@ -118,6 +118,11 @@ body {
     text-align: center;
   }
 }
+@media screen and (max-width: 695px) {
+  .ambientes .primer_ambiente {
+    height: 70vh;
+  }
+}
 @media screen and (max-width: 380px) {
   .ambientes .primer_ambiente {
     width: 80%;
@@ -195,11 +200,21 @@ body {
   margin: auto;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 992px) {
+  .contenedor-semana {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 695px) {
+  .contenedor-semana {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 380px) {
   .contenedor-semana {
-    display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;

@@ -263,8 +263,7 @@
                 width: 40px;
 
                 @include mobile {
-                    width: 30px;
-                    margin: 20px 10px;
+                    margin-top: 10px;
                 }
             }
         }
@@ -447,25 +446,46 @@
             .input-form {
                 width: 90%;
                 height: 40px;
-                padding: 0 0;
+                padding: 0 10px;
                 margin: auto;
                 color: $color-letra;
-                font-size: 16px;
+                font-size: 15px;
                 background-color: $verde-claro;
                 border: 1px solid $verde-claro;
                 border-radius: 10px;
             }
 
+            #asunto {
+                width: 90%;
+                margin: auto;
+                padding: 10px;
+                font-size: 15px;
+                background-color: $verde-claro;
+                border-radius: 10px;
+                border: none;
+            }
+
             #mensaje {
                 width: 90%;
                 height: 100px;
-                padding: 10px 0 0 20px;
+                padding: 10px 10px;
                 margin: auto;
                 color: $color-letra;
-                font-size: 16px;
+                font-size: 15px;
                 background-color: $verde-claro;
                 border: 1px solid $verde-claro;
                 border-radius: 10px;
+            }
+
+            section {
+                width: 90%;
+                margin: auto;
+                padding-top: 10px;
+
+                span {
+                    font-size: 15px;
+                    padding-left: 10px;
+                }
             }
         }
     }

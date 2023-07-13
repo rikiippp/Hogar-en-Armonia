@@ -4,15 +4,14 @@
     font-weight: bold;
     color: #000000 !important;
     font-size: 14px;
-    text-shadow: 0px 0px 0px #8FC1B5;
     padding: 10px 25px;
     border-radius: 10px;
-    border: 3px outset #007566;
-    background: #0FC2C0;
+    border: 3px outset #5c7c39;
+    background: #8abe53;
 
     &:hover {
         color: #000000 !important;
-        background: #0FC2C0;
-        background: linear-gradient(to top, #0CABA8, #0FC2C0);
+        background: #8abe53;
+        background: linear-gradient(to top, #509b41, #8abe53);
     }
 }

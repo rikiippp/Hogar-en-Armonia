@@ -79,16 +79,15 @@ body {
   font-weight: bold;
   color: #000000 !important;
   font-size: 14px;
-  text-shadow: 0px 0px 0px #8FC1B5;
   padding: 10px 25px;
   border-radius: 10px;
-  border: 3px outset #007566;
-  background: #0FC2C0;
+  border: 3px outset #5c7c39;
+  background: #8abe53;
 }
 .button-footer:hover {
   color: #000000 !important;
-  background: #0FC2C0;
-  background: linear-gradient(to top, #0CABA8, #0FC2C0);
+  background: #8abe53;
+  background: linear-gradient(to top, #509b41, #8abe53);
 }
 
 .ambientes {
@@ -360,8 +359,7 @@ body {
 }
 @media screen and (max-width: 380px) {
   .footer .contenedor-footer .columna-redes img {
-    width: 30px;
-    margin: 20px 10px;
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -538,24 +536,42 @@ body {
 .contenedor-contacto .form-contacto form .input-form {
   width: 90%;
   height: 40px;
-  padding: 0 0;
+  padding: 0 10px;
   margin: auto;
   color: black;
-  font-size: 16px;
+  font-size: 15px;
   background-color: #8abe53;
   border: 1px solid #8abe53;
   border-radius: 10px;
 }
+.contenedor-contacto .form-contacto form #asunto {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #8abe53;
+  border-radius: 10px;
+  border: none;
+}
 .contenedor-contacto .form-contacto form #mensaje {
   width: 90%;
   height: 100px;
-  padding: 10px 0 0 20px;
+  padding: 10px 10px;
   margin: auto;
   color: black;
-  font-size: 16px;
+  font-size: 15px;
   background-color: #8abe53;
   border: 1px solid #8abe53;
   border-radius: 10px;
+}
+.contenedor-contacto .form-contacto form section {
+  width: 90%;
+  margin: auto;
+  padding-top: 10px;
+}
+.contenedor-contacto .form-contacto form section span {
+  font-size: 15px;
+  padding-left: 10px;
 }
 
 .contenedor-muebles {

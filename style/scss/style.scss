@@ -310,10 +310,6 @@
     align-items: center;
     margin: 30px 0;
 
-    div {
-        margin: 20px 0;
-    }
-
     .info-nosotros {
         width: 50%;
         text-align: center;
@@ -335,6 +331,14 @@
             }
         }
 
+        h3 {
+            color: $color-primary;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: left;
+            padding-left: 20px;
+        }
+        
         p {
             color: $color-letra;
             font-size: 18px;
@@ -346,23 +350,64 @@
             }
         }
     }
+}
 
-    .mapa {
+.contenedor-mapa {
+    width: 100%;
+
+    h3 {
+        text-align: center;
+        color: $color-primary;
+        font-size: 26px;
+        font-weight: bold;
+    }
+
+    .mapas {
+        width: 80%;
+        margin: auto;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @include tablet {
+            flex-direction: column;
+        }
 
         @include intermedio {
             width: 90%;
-
-            iframe {
-                width: 100%;
-            }
         }
 
         @include mobile {
-            width: 80%;
+            width: 90%;
+        }
+
+        div {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+
+            @include tablet {
+                width: 90%;
+            }
+            @include intermedio {
+                width: 100%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+            h3 {
+                font-size: 22px;
+                padding-bottom: 10px;
+            }
+
+            iframe {
+                width: 100%;
+                box-shadow: 0px 0px 12px 5px #00000063;            
+            }
         }
     }
 }
-
 
 // Pagina Contacto
 .head-contacto {

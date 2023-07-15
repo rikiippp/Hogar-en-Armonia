@@ -124,7 +124,7 @@ body {
 }
 @media screen and (max-width: 380px) {
   .ambientes .primer_ambiente {
-    width: 80%;
+    width: 90%;
   }
 }
 .ambientes .primer_ambiente img {
@@ -135,7 +135,7 @@ body {
 }
 @media screen and (max-width: 380px) {
   .ambientes .primer_ambiente img {
-    width: 80%;
+    width: 90%;
   }
 }
 .ambientes .primer_ambiente .card_ambiente {
@@ -256,25 +256,69 @@ body {
 }
 
 .contenedor-mueble-destacado {
-  width: 100%;
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  margin: 30px auto 60px auto;
 }
-.contenedor-mueble-destacado .card {
+.contenedor-mueble-destacado .card-mueble-destacado {
+  width: 45rem;
+  height: 60vh;
+  margin: auto;
+  border: 1px solid #9fa6b2;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px #9fa6b2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
-.contenedor-mueble-destacado .card .card-title {
-  font-size: 18px;
+@media screen and (max-width: 992px) {
+  .contenedor-mueble-destacado .card-mueble-destacado {
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 695px) {
+  .contenedor-mueble-destacado .card-mueble-destacado {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+  .contenedor-mueble-destacado .card-mueble-destacado img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.contenedor-mueble-destacado .card-body-destacado {
+  margin: 20px;
+}
+.contenedor-mueble-destacado .card-body-destacado h5 {
+  font-size: 22px;
   font-weight: bold;
+  color: black;
 }
-.contenedor-mueble-destacado .card .card-text {
+@media screen and (max-width: 695px) {
+  .contenedor-mueble-destacado .card-body-destacado h5 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .contenedor-mueble-destacado .card-body-destacado h5 {
+    font-size: 20px;
+  }
+}
+.contenedor-mueble-destacado .card-body-destacado p {
   font-size: 16px;
-  font-weight: bold;
 }
-.contenedor-mueble-destacado .card .card-text .rebaja {
+@media screen and (max-width: 695px) {
+  .contenedor-mueble-destacado .card-body-destacado p {
+    font-size: 14px;
+  }
+}
+.contenedor-mueble-destacado .card-body-destacado p .rebaja {
   margin: 0 20px;
   color: rgba(194, 53, 53, 0.7058823529);
+  font-weight: bold;
+}
+.contenedor-mueble-destacado .card-body-destacado button {
+  margin: 20px 0;
 }
 
 .footer {

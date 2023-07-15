@@ -47,7 +47,7 @@
         }
 
         @include mobile {
-            width: 80%;
+            width: 90%;
         }
 
         img {
@@ -57,7 +57,7 @@
             border-radius: 10px;
 
             @include mobile {
-                width: 80%;
+                width: 90%;
             }
         }
 
@@ -117,7 +117,6 @@
     }
 }
 
-
 // Productos Destacados de la Semana
 .contenedor-semana {
     width: 100%;
@@ -144,7 +143,7 @@
     .card-productos {
         @include card (17rem, 50vh, 60%);
 
-    
+
         @include mobile {
             width: 15rem;
             height: 45vh;
@@ -155,32 +154,72 @@
 
 // Mueble Destacado 
 .contenedor-mueble-destacado {
-    width: 100%;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
+    width: 90%;
+    margin: 30px auto 60px auto;
 
-    .card {
+    .card-mueble-destacado {
+        width: 45rem;
+        height: 60vh;
+        margin: auto;
+        border: 1px solid #9fa6b2;
+        border-radius: 10px;
         box-shadow: 3px 3px 3px #9fa6b2;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
 
-        .card-title {
-            font-size: 18px;
-            font-weight: bold;
+        @include tablet {
+            width: 40rem;
         }
 
-        .card-text {
-            font-size: 16px;
-            font-weight: bold;
+        @include intermedio {
+            width: 90%;
+            height: auto;
+            flex-direction: column;
 
-            .rebaja {
-                margin: 0 20px;
-                color: #c23535b4;
+            img {
+                width: 100%;
+                object-fit: cover;
             }
         }
     }
 
-}
+    .card-body-destacado {
+        margin: 20px;
 
+        h5 {
+            font-size: 22px;
+            font-weight: bold;
+            color: $color-letra;
+
+            @include intermedio {
+                font-size: 20px;
+            }
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+
+            @include intermedio {
+                font-size: 14px;
+            }
+
+            .rebaja {
+                margin: 0 20px;
+                color: #c23535b4;
+                font-weight: bold;
+            }
+        }
+
+        button {
+            margin: 20px 0;
+        }
+    }
+}
 
 // Footer 
 .footer {
@@ -338,7 +377,7 @@
             text-align: left;
             padding-left: 20px;
         }
-        
+
         p {
             color: $color-letra;
             font-size: 18px;
@@ -390,12 +429,15 @@
             @include tablet {
                 width: 90%;
             }
+
             @include intermedio {
                 width: 100%;
             }
+
             @include mobile {
                 width: 100%;
             }
+
             h3 {
                 font-size: 22px;
                 padding-bottom: 10px;
@@ -403,7 +445,7 @@
 
             iframe {
                 width: 100%;
-                box-shadow: 0px 0px 12px 5px #00000063;            
+                box-shadow: 0px 0px 12px 5px #00000063;
             }
         }
     }
